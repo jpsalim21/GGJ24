@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 285668628}
   - component: {fileID: 285668625}
   - component: {fileID: 285668627}
-  - component: {fileID: 285668629}
+  - component: {fileID: 285668623}
   - component: {fileID: 285668630}
   - component: {fileID: 285668631}
   m_Layer: 9
@@ -586,6 +586,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &285668623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285668622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8965234c4278c754cb60571e0974573c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  dashTime: 0.2
+  dashSpeed: 20
 --- !u!4 &285668624
 Transform:
   m_ObjectHideFlags: 0
@@ -616,8 +631,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  dashTime: 0.1
-  dashSpeed: 20
 --- !u!50 &285668626
 Rigidbody2D:
   serializedVersion: 4
@@ -674,7 +687,7 @@ MonoBehaviour:
     scriptReferente: {fileID: 285668627}
     spriteReferente: {fileID: 996542389}
   - estado: 2
-    scriptReferente: {fileID: 285668629}
+    scriptReferente: {fileID: 285668623}
     spriteReferente: {fileID: 278740548}
   - estado: 3
     scriptReferente: {fileID: 285668630}
@@ -683,21 +696,6 @@ MonoBehaviour:
     estado: 0
     scriptReferente: {fileID: 285668625}
     spriteReferente: {fileID: 1339314858}
---- !u!114 &285668629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285668622}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aebe0e20ee1e6ae4184d54a1cd2ffcc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  dashTime: 0.1
-  dashSpeed: 20
 --- !u!114 &285668630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,7 +1368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e370a3c5c9743164cbd6345fdf4db6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  estado: 1
+  estado: 2
 --- !u!1 &881213903
 GameObject:
   m_ObjectHideFlags: 0
