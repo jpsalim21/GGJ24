@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 285668625}
   - component: {fileID: 285668627}
   - component: {fileID: 285668629}
+  - component: {fileID: 285668630}
   m_Layer: 0
   m_Name: Galinha
   m_TagString: Untagged
@@ -276,7 +277,24 @@ MonoBehaviour:
     scriptReferente: {fileID: 285668627}
   - estado: 2
     scriptReferente: {fileID: 285668629}
+  - estado: 3
+    scriptReferente: {fileID: 285668630}
 --- !u!114 &285668629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285668622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebe0e20ee1e6ae4184d54a1cd2ffcc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  dashTime: 0.2
+  dashSpeed: 20
+--- !u!114 &285668630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,12 +303,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 285668622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aebe0e20ee1e6ae4184d54a1cd2ffcc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ea0f5c07e53c9544aa78b110e5cb3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  dashTime: 0.2
-  dashSpeed: 20
+  forca: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

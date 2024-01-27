@@ -6,5 +6,6 @@ public enum EstadosGalinha
 {
     normal,
     fuzil,
-    bota
+    bota,
+    balao
 }
