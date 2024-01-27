@@ -1,43 +1,19 @@
 fileFormatVersion: 2
-guid: ec3791da256b2024fad5bc2e8b4449e8
+guid: c61b28767c3c24844ab06e2766ac35c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3819230895306360520
-    second: tubarao_0
+      213: 1192220460079729033
+    second: 2_caras_numa_moto 1_0
   - first:
-      213: 1020061633988167440
-    second: tubarao_1
+      213: -1580412341373686475
+    second: 2_caras_numa_moto 1_1
   - first:
-      213: 7258979935206664144
-    second: tubarao_2
+      213: 4973214614924796591
+    second: 2_caras_numa_moto 1_0
   - first:
-      213: 3961689658514429425
-    second: tubarao_3
-  - first:
-      213: 3254366038443970688
-    second: tubarao_4
-  - first:
-      213: 3486940597618015540
-    second: tubarao_5
-  - first:
-      213: -4815560904770061163
-    second: tubarao_0
-  - first:
-      213: 445785499596336060
-    second: tubarao_1
-  - first:
-      213: 3245440761610525177
-    second: tubarao_2
-  - first:
-      213: -8512738841562535942
-    second: tubarao_3
-  - first:
-      213: -95333915178409401
-    second: tubarao_4
-  - first:
-      213: -2894008692380651917
-    second: tubarao_5
+      213: 5520177982857470518
+    second: 2_caras_numa_moto 1_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -135,127 +111,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tubarao_0
+      name: 2_caras_numa_moto 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 943
+        height: 870
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2af52d758640540800000000000000
+      internalID: 4973214614924796591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2_caras_numa_moto 1_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 976
-        height: 900
+        width: 943
+        height: 870
       alignment: 9
-      pivot: {x: 0.77, y: 0.45}
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59cfbecfed0bb2db0800000000000000
-      internalID: -4815560904770061163
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tubarao_1
-      rect:
-        serializedVersion: 2
-        x: 976
-        y: 0
-        width: 976
-        height: 900
-      alignment: 9
-      pivot: {x: 0.77, y: 0.45}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbba57dcc8fbf2600800000000000000
-      internalID: 445785499596336060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tubarao_2
-      rect:
-        serializedVersion: 2
-        x: 1952
-        y: 0
-        width: 976
-        height: 900
-      alignment: 9
-      pivot: {x: 0.77, y: 0.45}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f95e577d2f1a0d20800000000000000
-      internalID: 3245440761610525177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tubarao_3
-      rect:
-        serializedVersion: 2
-        x: 2928
-        y: 0
-        width: 976
-        height: 900
-      alignment: 9
-      pivot: {x: 0.77, y: 0.45}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af7aef2402dacd980800000000000000
-      internalID: -8512738841562535942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tubarao_4
-      rect:
-        serializedVersion: 2
-        x: 3904
-        y: 0
-        width: 979
-        height: 900
-      alignment: 9
-      pivot: {x: 0.77, y: 0.45}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7426eba2f4e4daef0800000000000000
-      internalID: -95333915178409401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tubarao_5
-      rect:
-        serializedVersion: 2
-        x: 4888
-        y: 0
-        width: 971
-        height: 900
-      alignment: 9
-      pivot: {x: 0.77, y: 0.45}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37e22c96d6a66d7d0800000000000000
-      internalID: -2894008692380651917
+      spriteID: 632e625d0ac9b9c40800000000000000
+      internalID: 5520177982857470518
       vertices: []
       indices: 
       edges: []

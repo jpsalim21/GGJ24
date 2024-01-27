@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Bueiro : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator anim;
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 9)
+        {
+            GalinhaController.gc.gameObject.SetActive(false);
+            anim.SetTrigger("Bueiro");
+        }
     }
 }
