@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 2a067d48d2a15494eb8b2b7ee75acf2e
+guid: d4b710770267ed341a9487b936a4185b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4141600616554177544
-    second: galinha_move_0
-  - first:
-      213: 1131658991467048671
-    second: galinha_move_1
-  - first:
-      213: -4576847955825408038
-    second: galinha_move_2
-  - first:
-      213: -3901152880777041831
-    second: galinha_move_3
+      213: 1753205982242350755
+    second: objects_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -43,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -57,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,85 +102,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: galinha_move_0
+      name: objects_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 349
-        height: 295
+        y: 65
+        width: 47
+        height: 63
       alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 804204f41dbe97930800000000000000
-      internalID: 4141600616554177544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galinha_move_1
-      rect:
-        serializedVersion: 2
-        x: 349
-        y: 0
-        width: 349
-        height: 295
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fde25416bd574bf00800000000000000
-      internalID: 1131658991467048671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galinha_move_2
-      rect:
-        serializedVersion: 2
-        x: 698
-        y: 0
-        width: 349
-        height: 295
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad7cd0a8805cb70c0800000000000000
-      internalID: -4576847955825408038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: galinha_move_3
-      rect:
-        serializedVersion: 2
-        x: 1046
-        y: 0
-        width: 338
-        height: 295
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 958eac6cf125cd9c0800000000000000
-      internalID: -3901152880777041831
+      spriteID: 3a625ad4d83a45810800000000000000
+      internalID: 1753205982242350755
       vertices: []
       indices: 
       edges: []
