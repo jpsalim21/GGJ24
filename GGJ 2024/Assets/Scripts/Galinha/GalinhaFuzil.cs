@@ -9,41 +9,54 @@ public class GalinhaFuzil : MonoBehaviour
     float timeDashPassed = 0;
     bool dashing = false;
     Vector2 direction = Vector2.zero;
+    Quaternion lookDirection;
+
+    [SerializeField] GameObject bala;
+
+    float timeBuff = 0.2f, timeBuffPassed = 0;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Debug.Log(Quaternion.identity);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!dashing)
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            timeBuffPassed = timeBuff;
+            direction = Vector2.up;
+            lookDirection = Quaternion.AngleAxis(90, Vector3.forward);
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            timeBuffPassed = timeBuff;
+            direction = Vector2.left;
+            lookDirection = Quaternion.AngleAxis(180, Vector3.forward);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            timeBuffPassed = timeBuff;
+            direction = Vector2.right;
+            lookDirection = Quaternion.identity;
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            timeBuffPassed = timeBuff;
+            direction = Vector2.down;
+            lookDirection = Quaternion.AngleAxis(-90, Vector3.forward);
+        }
+
+        if(timeBuffPassed > 0)
+        {
+            if (!dashing)
             {
-                direction = Vector2.up;
-                timeDashPassed = timeDash;
-                dashing = true;
+                StartDash(Vector2.down, Quaternion.AngleAxis(-90, Vector3.forward));
+                timeBuffPassed = 0;
             }
-            else if (Input.GetKeyDown(KeyCode.A))
-            {
-                direction = Vector2.left;
-                timeDashPassed = timeDash;
-                dashing = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                direction = Vector2.right;
-                timeDashPassed = timeDash;
-                dashing = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.S))
-            {
-                direction = Vector2.down;
-                timeDashPassed = timeDash;
-                dashing = true;
-            }
+            timeBuffPassed -= Time.deltaTime;
         }
 
         if(timeDashPassed > 0)
@@ -53,8 +66,16 @@ public class GalinhaFuzil : MonoBehaviour
         {
             dashing = false;
         }
-
     }
+    void StartDash(Vector2 dir, Quaternion q)
+    {
+        Tiro t = Instantiate(bala, transform.position, q).GetComponent<Tiro>();
+        t.direction = -dir;
+        timeDashPassed = timeDash;
+        dashing = true;
+    }
+
+
     private void FixedUpdate()
     {
         if (dashing)
