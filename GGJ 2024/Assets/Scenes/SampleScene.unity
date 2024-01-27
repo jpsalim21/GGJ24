@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 285668628}
   - component: {fileID: 285668625}
   - component: {fileID: 285668627}
+  - component: {fileID: 285668629}
   m_Layer: 0
   m_Name: Galinha
   m_TagString: Untagged
@@ -249,7 +250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285668622}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90c5ba5e7bd2fc14281f67fc7af5b2a5, type: 3}
   m_Name: 
@@ -273,8 +274,23 @@ MonoBehaviour:
     scriptReferente: {fileID: 285668625}
   - estado: 1
     scriptReferente: {fileID: 285668627}
-  - estado: 0
-    scriptReferente: {fileID: 0}
+  - estado: 2
+    scriptReferente: {fileID: 285668629}
+--- !u!114 &285668629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285668622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebe0e20ee1e6ae4184d54a1cd2ffcc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  dashTime: 0.2
+  dashSpeed: 20
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LookaheadTime: 0
+  m_LookaheadTime: 0.1
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
@@ -449,8 +465,8 @@ MonoBehaviour:
   m_DeadZoneHeight: 0.1
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 0.7
+  m_SoftZoneHeight: 0.7
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
