@@ -665,7 +665,8 @@ MonoBehaviour:
   carro: {fileID: 7089753995028789605, guid: 4cabb592930685c4fb224d9609a366e3, type: 3}
   tamanho: 10
   destino: {fileID: 1752528556}
-  timeToSpawn: 3
+  timeToSpawn: 1
+  timeMaxSpawn: 3
 --- !u!4 &1320485388
 Transform:
   m_ObjectHideFlags: 0
@@ -758,4 +759,5 @@ MonoBehaviour:
   carro: {fileID: 7089753995028789605, guid: 4cabb592930685c4fb224d9609a366e3, type: 3}
   tamanho: 10
   destino: {fileID: 881213904}
-  timeToSpawn: 3
+  timeToSpawn: 1
+  timeMaxSpawn: 3

@@ -9,7 +9,7 @@ public class Carros : MonoBehaviour
     [SerializeField] Transform destino;
     Queue<GameObject> pool;
 
-    [SerializeField] float timeToSpawn;
+    [SerializeField] float timeToSpawn, timeMaxSpawn;
     float timePassed;
 
     void Start()
@@ -29,7 +29,8 @@ public class Carros : MonoBehaviour
     {
         if(timePassed <= 0)
         {
-            timePassed = timeToSpawn;
+
+            timePassed = Random.Range(timeToSpawn, timeMaxSpawn);
             SpawnCarro();
         } else
         {
