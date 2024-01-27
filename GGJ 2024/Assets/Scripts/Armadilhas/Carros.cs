@@ -29,7 +29,6 @@ public class Carros : MonoBehaviour
     {
         if(timePassed <= 0)
         {
-
             timePassed = Random.Range(timeToSpawn, timeMaxSpawn);
             SpawnCarro();
         } else
