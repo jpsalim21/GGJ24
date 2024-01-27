@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Carros : MonoBehaviour
 {
-    [SerializeField] GameObject carro;
+    [SerializeField] GameObject[] carro;
     [SerializeField] int tamanho;
     [SerializeField] Transform destino;
     Queue<GameObject> pool;
@@ -17,7 +17,8 @@ public class Carros : MonoBehaviour
         pool = new Queue<GameObject>();
         for(int i = 0; i < tamanho; i++)
         {
-            GameObject a = Instantiate(carro, transform);
+            int index = Random.Range(0, carro.Length);
+            GameObject a = Instantiate(carro[index], transform);
             a.GetComponent<MoveCarro>().destino = this.destino.position;
             pool.Enqueue(a);
             a.SetActive(false);

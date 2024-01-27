@@ -1,7 +1,100 @@
 fileFormatVersion: 2
 guid: 9541965210ac2ce4cac7294c8c5b9611
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2047232651910618424
+    second: carro_verde_0
+  - first:
+      213: -4175042815252209802
+    second: carro_verde_1
+  - first:
+      213: 695819648569384365
+    second: carro_verde_2
+  - first:
+      213: -2734636429496544026
+    second: carro_verde_3
+  - first:
+      213: 9060246946584169603
+    second: carro_verde_4
+  - first:
+      213: -9038225144759510210
+    second: carro_verde_5
+  - first:
+      213: -5203646943563958616
+    second: carro_verde_6
+  - first:
+      213: -3700277523817226232
+    second: carro_verde_7
+  - first:
+      213: -7548108300510579655
+    second: carro_verde_8
+  - first:
+      213: -7368774738544795766
+    second: carro_verde_9
+  - first:
+      213: -1657431327837871616
+    second: carro_verde_10
+  - first:
+      213: 3529187034030990649
+    second: carro_verde_11
+  - first:
+      213: 2811102282273736643
+    second: carro_verde_12
+  - first:
+      213: -4963288330762368530
+    second: carro_verde_13
+  - first:
+      213: 5535310120049742602
+    second: carro_verde_14
+  - first:
+      213: 6315727139546981330
+    second: carro_verde_15
+  - first:
+      213: 985289358751783418
+    second: carro_verde_16
+  - first:
+      213: 7488504818165528700
+    second: carro_verde_17
+  - first:
+      213: 2721059456537934242
+    second: carro_verde_18
+  - first:
+      213: 1735469556722670647
+    second: carro_verde_19
+  - first:
+      213: -4883174676015799428
+    second: carro_verde_20
+  - first:
+      213: -961426966494396170
+    second: carro_verde_21
+  - first:
+      213: -768285544135223781
+    second: carro_verde_22
+  - first:
+      213: 5688790693850551144
+    second: carro_verde_23
+  - first:
+      213: -2384221825664801241
+    second: carro_verde_24
+  - first:
+      213: -2845406425997688933
+    second: carro_verde_25
+  - first:
+      213: 7223308963344299782
+    second: carro_verde_26
+  - first:
+      213: -8356687442085578382
+    second: carro_verde_27
+  - first:
+      213: 700295343347986508
+    second: carro_verde_28
+  - first:
+      213: -4279963744537916089
+    second: carro_verde_29
+  - first:
+      213: -7793270657420755072
+    second: carro_verde_30
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +133,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +164,96 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: carro_verde_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1486
+        width: 1421
+        height: 743
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c26942ffb4c693e0800000000000000
+      internalID: -2047232651910618424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carro_verde_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 743
+        width: 1421
+        height: 743
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f58da0ea44f06c0800000000000000
+      internalID: -4175042815252209802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carro_verde_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1421
+        height: 743
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad17b4a84c08a900800000000000000
+      internalID: 695819648569384365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -2696,7 +2696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881213903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.68, y: 0, z: 0}
+  m_LocalPosition: {x: 22.55, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1780119776}
@@ -2883,11 +2883,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f1e35d1f46f5b46a50d3aa85e51b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carro: {fileID: 7089753995028789605, guid: 4cabb592930685c4fb224d9609a366e3, type: 3}
+  carro:
+  - {fileID: 5938002037763366780, guid: 25d105793d2b98146b635c589fd856c3, type: 3}
+  - {fileID: 6557769877416532034, guid: 343078093a1f84642b2c22171c00a49a, type: 3}
+  - {fileID: 2962746563204137258, guid: 7d79956372b4b9c4281f390ef46d8db7, type: 3}
+  - {fileID: 7089753995028789605, guid: 4cabb592930685c4fb224d9609a366e3, type: 3}
+  - {fileID: 3317386092129846648, guid: 28138cb21fc070a47a27a823646d9ac7, type: 3}
   tamanho: 10
   destino: {fileID: 1752528556}
   timeToSpawn: 1
-  timeMaxSpawn: 1.5
+  timeMaxSpawn: 2
 --- !u!4 &1320485388
 Transform:
   m_ObjectHideFlags: 0
@@ -2896,7 +2901,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320485386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.88, y: 3.39, z: 0}
+  m_LocalPosition: {x: 12.88, y: 3.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1752528556}
@@ -3056,7 +3061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752528555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18, y: 0, z: 0}
+  m_LocalPosition: {x: -25.61, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1320485388}
@@ -3087,7 +3092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780119775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 2, z: 0}
+  m_LocalPosition: {x: -11.7, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 881213904}
@@ -3106,8 +3111,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f1e35d1f46f5b46a50d3aa85e51b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carro: {fileID: 7089753995028789605, guid: 4cabb592930685c4fb224d9609a366e3, type: 3}
+  carro:
+  - {fileID: 5938002037763366780, guid: 25d105793d2b98146b635c589fd856c3, type: 3}
+  - {fileID: 6557769877416532034, guid: 343078093a1f84642b2c22171c00a49a, type: 3}
+  - {fileID: 2962746563204137258, guid: 7d79956372b4b9c4281f390ef46d8db7, type: 3}
+  - {fileID: 7089753995028789605, guid: 4cabb592930685c4fb224d9609a366e3, type: 3}
+  - {fileID: 3317386092129846648, guid: 28138cb21fc070a47a27a823646d9ac7, type: 3}
   tamanho: 10
   destino: {fileID: 881213904}
   timeToSpawn: 1
-  timeMaxSpawn: 1.5
+  timeMaxSpawn: 2
