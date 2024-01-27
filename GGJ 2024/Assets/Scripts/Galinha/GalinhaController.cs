@@ -17,7 +17,7 @@ public class GalinhaController : MonoBehaviour
     public static GalinhaController gc;
     Rigidbody2D rb;
 
-    Vector2 spawnPoint;
+    public Vector2 spawnPoint;
 
     bool dead = false;
 
