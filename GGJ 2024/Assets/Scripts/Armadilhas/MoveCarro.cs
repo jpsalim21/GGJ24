@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveCarro : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] Vector2 destino;
+    public Vector2 destino;
     [SerializeField] float speed, tempoDesativar;
     Vector2 direcao;
 

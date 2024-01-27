@@ -6,6 +6,7 @@ public class Carros : MonoBehaviour
 {
     [SerializeField] GameObject carro;
     [SerializeField] int tamanho;
+    [SerializeField] Transform destino;
     Queue<GameObject> pool;
 
     [SerializeField] float timeToSpawn;
@@ -17,6 +18,7 @@ public class Carros : MonoBehaviour
         for(int i = 0; i < tamanho; i++)
         {
             GameObject a = Instantiate(carro, transform);
+            a.GetComponent<MoveCarro>().destino = this.destino.position;
             pool.Enqueue(a);
             a.SetActive(false);
         }
