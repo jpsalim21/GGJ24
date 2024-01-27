@@ -9,6 +9,7 @@ public class GalinhaController : MonoBehaviour
     {
         public EstadosGalinha estado;
         public MonoBehaviour scriptReferente;
+        public GameObject spriteReferente;
     }
     [SerializeField] StructEstado[] listaEstados;
     StructEstado estadoAtual;
