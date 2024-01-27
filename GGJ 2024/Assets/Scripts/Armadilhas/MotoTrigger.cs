@@ -14,6 +14,7 @@ public class MotoTrigger : MonoBehaviour
     {
         if(collision.gameObject.layer == 9)
         {
+            if (objeto == null) return;
             objeto.SetActive(true);
         }
     }

@@ -17,10 +17,13 @@ public class GalinhaController : MonoBehaviour
     public static GalinhaController gc;
     Rigidbody2D rb;
 
+    Vector2 spawnPoint;
+
     bool dead = false;
 
     void Start()
     {
+        spawnPoint = transform.position;
         gc = this;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -32,10 +35,6 @@ public class GalinhaController : MonoBehaviour
     }
     public void ChangeState(EstadosGalinha novoEstado)
     {
-        if(novoEstado == estadoAtual.estado)
-        {
-            return;
-        }
         estadoAtual.scriptReferente.enabled = false;
         estadoAtual.spriteReferente.SetActive(false);
         switch (novoEstado)
@@ -54,7 +53,15 @@ public class GalinhaController : MonoBehaviour
         }
         estadoAtual.scriptReferente.enabled = true;
         estadoAtual.spriteReferente.SetActive(true);
-
+    }
+    IEnumerator respawn()
+    {
+        yield return new WaitForSeconds(0.6f);
+        transform.position = spawnPoint;
+        dead = false;
+        estadoAtual.spriteReferente.GetComponent<Animator>().SetTrigger("Reset");
+        estadoAtual.spriteReferente.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
+        ChangeState(EstadosGalinha.normal);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -66,6 +73,7 @@ public class GalinhaController : MonoBehaviour
             estadoAtual.spriteReferente.GetComponent<SpriteRenderer>().sortingLayerName = "PowerUp";
             rb.velocity = Vector2.zero;
             estadoAtual.spriteReferente.GetComponent<Animator>().SetTrigger("Die");
+            StartCoroutine("respawn");
 
         }
     }

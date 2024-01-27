@@ -8,6 +8,7 @@ public class MoveCarro : MonoBehaviour
     public Vector2 destino;
     [SerializeField] float speed, tempoDesativar;
     Vector2 direcao;
+    [SerializeField] bool shouldDestroy = false;
 
     void Start()
     {
@@ -22,12 +23,8 @@ public class MoveCarro : MonoBehaviour
     IEnumerator desativar()
     {
         yield return new WaitForSeconds(tempoDesativar);
+        if (shouldDestroy) Destroy(this.gameObject);
         gameObject.SetActive(false);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     private void FixedUpdate()
     {
