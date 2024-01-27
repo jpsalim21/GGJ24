@@ -10,16 +10,12 @@ public class Bueiro : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == 9)
         {
-            GalinhaController.gc.gameObject.SetActive(false);
+            GalinhaController.gc.Reviver();
             anim.SetTrigger("Bueiro");
         }
     }

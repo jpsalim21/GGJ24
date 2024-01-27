@@ -18,6 +18,7 @@ public class GalinhaController : MonoBehaviour
     Rigidbody2D rb;
 
     public Vector2 spawnPoint;
+    [SerializeField] GameObject resto;
 
     bool dead = false;
 
@@ -28,11 +29,7 @@ public class GalinhaController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void ChangeState(EstadosGalinha novoEstado)
     {
         estadoAtual.scriptReferente.enabled = false;
@@ -54,9 +51,15 @@ public class GalinhaController : MonoBehaviour
         estadoAtual.scriptReferente.enabled = true;
         estadoAtual.spriteReferente.SetActive(true);
     }
+
+    public void Reviver()
+    {
+        estadoAtual.spriteReferente.SetActive(false);
+        StartCoroutine("respawn");
+    }
     IEnumerator respawn()
     {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.7f);
         transform.position = spawnPoint;
         dead = false;
         estadoAtual.spriteReferente.GetComponent<Animator>().SetTrigger("Reset");
@@ -69,6 +72,7 @@ public class GalinhaController : MonoBehaviour
         {
             Debug.Log("Morreu");
             dead = true;
+            Instantiate(resto, transform.position, Quaternion.identity);
             estadoAtual.scriptReferente.enabled = false;
             estadoAtual.spriteReferente.GetComponent<SpriteRenderer>().sortingLayerName = "PowerUp";
             rb.velocity = Vector2.zero;
