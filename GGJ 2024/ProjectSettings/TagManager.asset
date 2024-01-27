@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Enemy
-  - 
+  - Player
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 728058713
+    locked: 0
+  - name: PowerUp
+    uniqueID: 2421158945
     locked: 0
   - name: Default
     uniqueID: 0
