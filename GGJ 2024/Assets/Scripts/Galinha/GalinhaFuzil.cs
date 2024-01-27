@@ -13,7 +13,7 @@ public class GalinhaFuzil : MonoBehaviour
 
     [SerializeField] GameObject bala;
 
-    float timeBuff = 0.2f, timeBuffPassed = 0;
+    float timeBuff = 0.1f, timeBuffPassed = 0;
 
     void Start()
     {
@@ -53,7 +53,7 @@ public class GalinhaFuzil : MonoBehaviour
         {
             if (!dashing)
             {
-                StartDash(Vector2.down, Quaternion.AngleAxis(-90, Vector3.forward));
+                StartDash(direction, lookDirection);
                 timeBuffPassed = 0;
             }
             timeBuffPassed -= Time.deltaTime;
