@@ -17,6 +17,7 @@ public class GalinhaBalao : MonoBehaviour
     void Update()
     {
         input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Debug.Log(rb.velocity.magnitude);
     }
 
     private void FixedUpdate()

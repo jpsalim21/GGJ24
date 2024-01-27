@@ -44,4 +44,11 @@ public class GalinhaController : MonoBehaviour
         }
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 8)
+        {
+            Debug.Log("Morreu");
+        }
+    }
 }
