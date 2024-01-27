@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d742359bdadcf4188e4c389717369f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  estatico: 0
+  estatico: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,8 +2886,8 @@ MonoBehaviour:
   carro: {fileID: 7089753995028789605, guid: 4cabb592930685c4fb224d9609a366e3, type: 3}
   tamanho: 10
   destino: {fileID: 1752528556}
-  timeToSpawn: 0.5
-  timeMaxSpawn: 2
+  timeToSpawn: 1
+  timeMaxSpawn: 1.5
 --- !u!4 &1320485388
 Transform:
   m_ObjectHideFlags: 0
@@ -3109,5 +3109,5 @@ MonoBehaviour:
   carro: {fileID: 7089753995028789605, guid: 4cabb592930685c4fb224d9609a366e3, type: 3}
   tamanho: 10
   destino: {fileID: 881213904}
-  timeToSpawn: 0.5
-  timeMaxSpawn: 2
+  timeToSpawn: 1
+  timeMaxSpawn: 1.5
