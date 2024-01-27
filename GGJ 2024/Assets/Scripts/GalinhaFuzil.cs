@@ -18,27 +18,34 @@ public class GalinhaFuzil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (!dashing)
         {
-            direction = Vector2.up;
-            timeDashPassed = timeDash;
-            dashing = true;
-        } else if (Input.GetKeyDown(KeyCode.A))
-        {
-            direction = Vector2.left;
-            timeDashPassed = timeDash;
-            dashing = true;
-        } else if (Input.GetKeyDown(KeyCode.D))
-        {
-            direction = Vector2.right;
-            timeDashPassed = timeDash;
-            dashing = true;
-        } else if (Input.GetKeyDown(KeyCode.S))
-        {
-            direction = Vector2.down;
-            timeDashPassed = timeDash;
-            dashing = true;
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                direction = Vector2.up;
+                timeDashPassed = timeDash;
+                dashing = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+                direction = Vector2.left;
+                timeDashPassed = timeDash;
+                dashing = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                direction = Vector2.right;
+                timeDashPassed = timeDash;
+                dashing = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                direction = Vector2.down;
+                timeDashPassed = timeDash;
+                dashing = true;
+            }
         }
+
         if(timeDashPassed > 0)
         {
             timeDashPassed -= Time.deltaTime;
