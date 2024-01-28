@@ -7,7 +7,7 @@ using TMPro;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TextEffectComponent : MonoBehaviour
 {
-    TextMeshProUGUI textComponent;
+    [SerializeField] TextMeshProUGUI textComponent;
     [Range(0.01f, 2f)]
     [SerializeField] float timeBetweenLetters = 0.04f;
     [SerializeField]
@@ -20,9 +20,10 @@ public class TextEffectComponent : MonoBehaviour
     EffectLabel seTemEspera;
     TextFormat textoFormatado;
 
-    void Awake()
+    void Start()
     {
-        textComponent = GetComponent<TextMeshProUGUI>();
+        //textComponent = GetComponent<TextMeshProUGUI>();
+        WriteText(textComponent.text);
     }
     public void WriteText(string newText)
     {
@@ -32,16 +33,8 @@ public class TextEffectComponent : MonoBehaviour
         {
             return;
         }
-        seTemEspera = null;
-        foreach(EffectLabel el in textoFormatado.listaEfeitos)
-        {
-            if(el.type == "wait")
-            {
-                seTemEspera = el;
-                break;
-            }
-        }
-        StartCoroutine(WriteTextCoroutine(textoFormatado.text));
+        textComponent.text = textoFormatado.text;
+        StartCoroutine(TextEffect.ExeEffect(textComponent, textoFormatado, timeBetweenLetters));
     }
     IEnumerator WriteTextCoroutine(string newText)
     {
