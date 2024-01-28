@@ -98,5 +98,13 @@ public class GalinhaController : MonoBehaviour
             StartCoroutine(respawn(true));
 
         }
+        if(collision.gameObject.layer == 10 && !dead && voando)
+        {
+            dead = true;
+            StopCoroutine("tempoPowerUp");
+            estadoAtual.scriptReferente.enabled = false;
+            rb.velocity = Vector2.zero;
+            StartCoroutine(respawn(true));
+        }
     }
 }
