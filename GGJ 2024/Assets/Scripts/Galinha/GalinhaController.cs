@@ -29,6 +29,8 @@ public class GalinhaController : MonoBehaviour
     [SerializeField] AudioClip morrer;
     AudioSource audioSource;
 
+    float tempoPup = 6;
+
     void Start()
     {
         spawnPoint = transform.position;
@@ -42,6 +44,7 @@ public class GalinhaController : MonoBehaviour
     {
         estadoAtual.scriptReferente.enabled = false;
         estadoAtual.spriteReferente.SetActive(false);
+        StopAllCoroutines();
         switch (novoEstado)
         {
             case EstadosGalinha.normal:
@@ -51,16 +54,19 @@ public class GalinhaController : MonoBehaviour
             case EstadosGalinha.fuzil:
                 estadoAtual = listaEstados[1];
                 voando = false;
+                tempoPup = 8;
                 StartCoroutine("tempoPowerUp");
                 break;
             case EstadosGalinha.bota:
                 estadoAtual = listaEstados[2];
                 voando = false;
+                tempoPup = 7;
                 StartCoroutine("tempoPowerUp");
                 break;
             case EstadosGalinha.balao:
                 estadoAtual = listaEstados[3];
                 voando = true;
+                tempoPup = 4;
                 StartCoroutine("tempoPowerUp");
                 break;
             default:
@@ -71,7 +77,7 @@ public class GalinhaController : MonoBehaviour
     }
     IEnumerator tempoPowerUp()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(tempoPup);
         ChangeState(EstadosGalinha.normal);
         voando = false;
     }

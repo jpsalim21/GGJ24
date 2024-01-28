@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: -148774939265760835}
   - component: {fileID: 8881591515892383373}
   - component: {fileID: 4480193312173968918}
+  - component: {fileID: 2864217572405401654}
   m_Layer: 0
   m_Name: potato_0
   m_TagString: Untagged
@@ -234,7 +235,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4480193312173968918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,3 +252,29 @@ MonoBehaviour:
   speed: 3
   tempoDesativar: 13
   shouldDestroy: 0
+--- !u!61 &2864217572405401654
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8208016397449178601}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04568982, y: 0.5674324}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.9049999, y: 2.9629369}
+    newSize: {x: 1.9049999, y: 2.9629369}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1739631, y: 1.1348648}
+  m_EdgeRadius: 0

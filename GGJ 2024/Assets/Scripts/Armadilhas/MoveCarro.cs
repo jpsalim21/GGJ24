@@ -35,6 +35,7 @@ public class MoveCarro : MonoBehaviour
         if(collision.gameObject.layer == 11)
         {
             gameObject.SetActive(false);
+            Destroy(collision.gameObject);
         }
     }
 

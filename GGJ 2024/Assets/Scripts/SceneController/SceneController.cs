@@ -8,4 +8,9 @@ public class SceneController : MonoBehaviour
     public void MudaCena(int i){
         SceneManager.LoadScene(i);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
