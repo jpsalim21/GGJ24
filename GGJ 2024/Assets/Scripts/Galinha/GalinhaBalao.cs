@@ -10,10 +10,12 @@ public class GalinhaBalao : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponentInParent<Rigidbody2D>();
     }
     private void OnEnable()
     {
+        rb = GetComponentInParent<Rigidbody2D>();
+        Debug.Log("Parou");
         rb.velocity = Vector2.zero;
     }
 

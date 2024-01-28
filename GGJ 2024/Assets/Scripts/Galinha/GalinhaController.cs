@@ -40,13 +40,16 @@ public class GalinhaController : MonoBehaviour
         {
             case EstadosGalinha.normal:
                 estadoAtual = listaEstados[0];
+                voando = false;
                 break;
             case EstadosGalinha.fuzil:
                 estadoAtual = listaEstados[1];
+                voando = false;
                 StartCoroutine("tempoPowerUp");
                 break;
             case EstadosGalinha.bota:
                 estadoAtual = listaEstados[2];
+                voando = false;
                 StartCoroutine("tempoPowerUp");
                 break;
             case EstadosGalinha.balao:
