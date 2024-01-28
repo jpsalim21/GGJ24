@@ -19,4 +19,9 @@ public class Bueiro : MonoBehaviour
             GalinhaController.gc.Reviver();
         }
     }
+
+    public void Mordida()
+    {
+        GetComponent<AudioSource>().Play();
+    }
 }

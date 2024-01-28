@@ -26,11 +26,15 @@ public class GalinhaController : MonoBehaviour
 
     bool deveInstanciar = true;
 
+    [SerializeField] AudioClip morrer;
+    AudioSource audioSource;
+
     void Start()
     {
         spawnPoint = transform.position;
         gc = this;
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     
@@ -81,6 +85,7 @@ public class GalinhaController : MonoBehaviour
     }
     IEnumerator respawn()
     {
+        audioSource.PlayOneShot(morrer);
         GameEvents.ge.GalinhaMorreu();
         if(voando) Instantiate(penas, transform.position + Vector3.up * 2.5f, Quaternion.identity);
         Debug.Log(deveInstanciar);

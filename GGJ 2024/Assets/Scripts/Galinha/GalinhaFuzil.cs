@@ -14,10 +14,15 @@ public class GalinhaFuzil : MonoBehaviour
     [SerializeField] GameObject bala;
 
     float timeBuff = 0.1f, timeBuffPassed = 0;
+    AudioSource sons;
+    [SerializeField] AudioClip audio;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sons = GetComponent<AudioSource>();
+        sons.clip = audio;
         Debug.Log(Quaternion.identity);
     }
 
@@ -29,24 +34,28 @@ public class GalinhaFuzil : MonoBehaviour
             timeBuffPassed = timeBuff;
             direction = Vector2.up;
             lookDirection = Quaternion.AngleAxis(90, Vector3.forward);
+            sons.PlayOneShot(audio);
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
             timeBuffPassed = timeBuff;
             direction = Vector2.left;
             lookDirection = Quaternion.AngleAxis(180, Vector3.forward);
+            sons.PlayOneShot(audio);
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             timeBuffPassed = timeBuff;
             direction = Vector2.right;
             lookDirection = Quaternion.identity;
+            sons.PlayOneShot(audio);
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
             timeBuffPassed = timeBuff;
             direction = Vector2.down;
             lookDirection = Quaternion.AngleAxis(-90, Vector3.forward);
+            sons.PlayOneShot(audio);
         }
 
         if(timeBuffPassed > 0)
