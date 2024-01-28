@@ -18,7 +18,7 @@ public class GalinhaController : MonoBehaviour
     Rigidbody2D rb;
 
     public Vector2 spawnPoint;
-    [SerializeField] GameObject resto;
+    [SerializeField] GameObject resto, penas;
 
     bool dead = false;
 
@@ -75,9 +75,11 @@ public class GalinhaController : MonoBehaviour
     }
     IEnumerator respawn(bool deveInstanciar)
     {
+        if(voando) Instantiate(penas, transform.position + Vector3.up * 2.5f, Quaternion.identity);
         Debug.Log(deveInstanciar);
         yield return new WaitForSeconds(0.7f);
-        if (deveInstanciar) Instantiate(resto, transform.position, Quaternion.identity);
+        GameEvents.ge.GalinhaMorreuFunc();
+        if (deveInstanciar || !voando) Instantiate(resto, transform.position, Quaternion.identity);
         transform.position = spawnPoint;
         dead = false;
         estadoAtual.spriteReferente.GetComponent<Animator>().SetTrigger("Reset");
@@ -103,6 +105,7 @@ public class GalinhaController : MonoBehaviour
             dead = true;
             StopCoroutine("tempoPowerUp");
             estadoAtual.scriptReferente.enabled = false;
+            estadoAtual.spriteReferente.SetActive(false);
             rb.velocity = Vector2.zero;
             StartCoroutine(respawn(true));
         }

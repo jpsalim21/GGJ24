@@ -15,8 +15,8 @@ public class Bueiro : MonoBehaviour
     {
         if(collision.gameObject.layer == 9)
         {
-            GalinhaController.gc.Reviver();
             anim.SetTrigger("Bueiro");
+            GalinhaController.gc.Reviver();
         }
     }
 }
