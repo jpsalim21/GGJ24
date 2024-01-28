@@ -41,6 +41,9 @@ TagManager:
   - name: Background
     uniqueID: 728058713
     locked: 0
+  - name: Sombra
+    uniqueID: 3412648265
+    locked: 0
   - name: PowerUp
     uniqueID: 2421158945
     locked: 0

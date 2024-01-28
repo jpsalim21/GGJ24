@@ -22,6 +22,8 @@ public class GalinhaController : MonoBehaviour
 
     bool dead = false;
 
+    bool voando = false;
+
     void Start()
     {
         spawnPoint = transform.position;
@@ -47,6 +49,11 @@ public class GalinhaController : MonoBehaviour
                 estadoAtual = listaEstados[2];
                 StartCoroutine("tempoPowerUp");
                 break;
+            case EstadosGalinha.balao:
+                estadoAtual = listaEstados[3];
+                voando = true;
+                StartCoroutine("tempoPowerUp");
+                break;
             default:
                 break;
         }
@@ -57,15 +64,18 @@ public class GalinhaController : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
         ChangeState(EstadosGalinha.normal);
+        voando = false;
     }
 
     public void Reviver()
     {
         estadoAtual.spriteReferente.SetActive(false);
+        dead = true;
         StartCoroutine(respawn(false));
     }
     IEnumerator respawn(bool deveInstanciar)
     {
+        Debug.Log(deveInstanciar);
         yield return new WaitForSeconds(0.7f);
         if (deveInstanciar) Instantiate(resto, transform.position, Quaternion.identity);
         transform.position = spawnPoint;
@@ -76,7 +86,7 @@ public class GalinhaController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 8 && !dead)
+        if(collision.gameObject.layer == 8 && !dead && !voando)
         {
             Debug.Log("Morreu");
             dead = true;
