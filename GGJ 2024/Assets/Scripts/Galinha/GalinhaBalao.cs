@@ -12,6 +12,10 @@ public class GalinhaBalao : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
+    private void OnEnable()
+    {
+        rb.velocity = Vector2.zero;
+    }
 
     // Update is called once per frame
     void Update()
