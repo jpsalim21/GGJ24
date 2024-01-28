@@ -30,4 +30,12 @@ public class MoveCarro : MonoBehaviour
     {
         rb.velocity = direcao * speed;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 11)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
 }

@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Rosto
+    uniqueID: 3469005317
+    locked: 0
   - name: Parte de cima
     uniqueID: 2152618669
     locked: 0
