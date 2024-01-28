@@ -6,6 +6,7 @@ using System;
 public class GameEvents : MonoBehaviour
 {
     public static event Action Restart;
+    public static event Action morreu;
     public static GameEvents ge;
 
     private void Start()
@@ -18,6 +19,11 @@ public class GameEvents : MonoBehaviour
         if(Restart != null)
         {
             Restart();
+        }
+    }
+    public void GalinhaMorreu(){
+        if(morreu != null){
+            morreu();
         }
     }
 }

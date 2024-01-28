@@ -13,7 +13,7 @@ public class Bueiro : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 9)
+        if(collision.gameObject.layer == 9 && !GalinhaController.gc.voando)
         {
             anim.SetTrigger("Bueiro");
             GalinhaController.gc.Reviver();

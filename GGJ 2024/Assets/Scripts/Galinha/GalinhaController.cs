@@ -22,7 +22,9 @@ public class GalinhaController : MonoBehaviour
 
     bool dead = false;
 
-    bool voando = false;
+    public bool voando = false;
+
+    bool deveInstanciar = true;
 
     void Start()
     {
@@ -74,15 +76,20 @@ public class GalinhaController : MonoBehaviour
     {
         estadoAtual.spriteReferente.SetActive(false);
         dead = true;
-        StartCoroutine(respawn(false));
+        deveInstanciar = false;
+        StartCoroutine(respawn());
     }
-    IEnumerator respawn(bool deveInstanciar)
+    IEnumerator respawn()
     {
+        GameEvents.ge.GalinhaMorreu();
         if(voando) Instantiate(penas, transform.position + Vector3.up * 2.5f, Quaternion.identity);
         Debug.Log(deveInstanciar);
         yield return new WaitForSeconds(0.7f);
         GameEvents.ge.GalinhaMorreuFunc();
-        if (deveInstanciar || !voando) Instantiate(resto, transform.position, Quaternion.identity);
+        if (deveInstanciar) {
+            GameObject a = Instantiate(resto, transform.position, Quaternion.identity);
+            a.transform.localScale = estadoAtual.spriteReferente.transform.localScale;
+        }
         transform.position = spawnPoint;
         dead = false;
         estadoAtual.spriteReferente.GetComponent<Animator>().SetTrigger("Reset");
@@ -100,17 +107,19 @@ public class GalinhaController : MonoBehaviour
             estadoAtual.spriteReferente.GetComponent<SpriteRenderer>().sortingLayerName = "PowerUp";
             rb.velocity = Vector2.zero;
             estadoAtual.spriteReferente.GetComponent<Animator>().SetTrigger("Die");
-            StartCoroutine(respawn(true));
+            deveInstanciar = true;
+            StartCoroutine(respawn());
 
         }
         if(collision.gameObject.layer == 10 && !dead && voando)
         {
             dead = true;
+            deveInstanciar = false;
             StopCoroutine("tempoPowerUp");
             estadoAtual.scriptReferente.enabled = false;
             estadoAtual.spriteReferente.SetActive(false);
             rb.velocity = Vector2.zero;
-            StartCoroutine(respawn(true));
+            StartCoroutine(respawn());
         }
     }
 }
