@@ -41,9 +41,11 @@ public class GalinhaController : MonoBehaviour
                 break;
             case EstadosGalinha.fuzil:
                 estadoAtual = listaEstados[1];
+                StartCoroutine("tempoPowerUp");
                 break;
             case EstadosGalinha.bota:
                 estadoAtual = listaEstados[2];
+                StartCoroutine("tempoPowerUp");
                 break;
             default:
                 break;
@@ -51,15 +53,21 @@ public class GalinhaController : MonoBehaviour
         estadoAtual.scriptReferente.enabled = true;
         estadoAtual.spriteReferente.SetActive(true);
     }
+    IEnumerator tempoPowerUp()
+    {
+        yield return new WaitForSeconds(10);
+        ChangeState(EstadosGalinha.normal);
+    }
 
     public void Reviver()
     {
         estadoAtual.spriteReferente.SetActive(false);
-        StartCoroutine("respawn");
+        StartCoroutine(respawn(false));
     }
-    IEnumerator respawn()
+    IEnumerator respawn(bool deveInstanciar)
     {
         yield return new WaitForSeconds(0.7f);
+        if (deveInstanciar) Instantiate(resto, transform.position, Quaternion.identity);
         transform.position = spawnPoint;
         dead = false;
         estadoAtual.spriteReferente.GetComponent<Animator>().SetTrigger("Reset");
@@ -72,12 +80,12 @@ public class GalinhaController : MonoBehaviour
         {
             Debug.Log("Morreu");
             dead = true;
-            Instantiate(resto, transform.position, Quaternion.identity);
+            StopCoroutine("tempoPowerUp");
             estadoAtual.scriptReferente.enabled = false;
             estadoAtual.spriteReferente.GetComponent<SpriteRenderer>().sortingLayerName = "PowerUp";
             rb.velocity = Vector2.zero;
             estadoAtual.spriteReferente.GetComponent<Animator>().SetTrigger("Die");
-            StartCoroutine("respawn");
+            StartCoroutine(respawn(true));
 
         }
     }
